@@ -1,0 +1,20 @@
+container1:
+  image: jayjohnson/springxd-container
+  container_name: "container1"
+  hostname: "container1"
+  user: springxd
+  ports:
+    - "8080:8080"
+    - "8081:8081"
+  cap_add:
+    - ALL
+    - NET_ADMIN
+    - SYS_ADMIN
+  links:
+    - "hsqldb"
+    - "zookeeper1"
+    - "admin1"
+    - "rabbit1"
+    - "rabbit2"
+    - "rabbit3"
+    - "redis1"
